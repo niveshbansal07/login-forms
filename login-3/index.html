@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth • Two Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="auth-wrapper">
+      <section class="auth-container" id="authContainer" aria-live="polite">
+        <!-- Left (Sign Up) form panel -->
+        <div class="panel form-panel form-panel--left" aria-labelledby="signupTitle">
+          <div class="form-inner">
+            <h2 id="signupTitle" class="panel-title">Sign Up</h2>
+            <form class="form" aria-label="Sign Up form" novalidate>
+              <div class="form-row two-col">
+                <div class="input-group">
+                  <label for="firstName">First Name</label>
+                  <input id="firstName" name="firstName" type="text" placeholder="Nivesh" autocomplete="given-name" />
+                </div>
+                <div class="input-group">
+                  <label for="lastName">Last Name</label>
+                  <input id="lastName" name="lastName" type="text" placeholder="Bansal" autocomplete="family-name" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="signUpEmail">Email</label>
+                  <input id="signUpEmail" name="email" type="email" placeholder="niveshbansal@example.com" autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="signUpPassword">Password</label>
+                  <input id="signUpPassword" name="password" type="password" placeholder="••••••••" autocomplete="new-password" />
+                </div>
+              </div>
+              <div class="form-row">
+                <label class="checkbox">
+                  <input type="checkbox" id="acceptTerms" />
+                  <span>I accept the Terms and Privacy Policy</span>
+                </label>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">SIGN UP</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right (Login) form panel -->
+        <div class="panel form-panel form-panel--right" aria-labelledby="loginTitle">
+          <div class="form-inner">
+            <h2 id="loginTitle" class="panel-title">Log In</h2>
+            <form class="form" aria-label="Login form" novalidate>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="loginEmail">Username or Email</label>
+                  <input id="loginEmail" name="email" type="text" placeholder="niveshbansal@example.com" autocomplete="username" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="loginPassword">Password</label>
+                  <input id="loginPassword" name="password" type="password" placeholder="••••••••" autocomplete="current-password" />
+                </div>
+              </div>
+              <div class="form-row row-between">
+                <label class="checkbox">
+                  <input type="checkbox" id="rememberMe" />
+                  <span>Remember me</span>
+                </label>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">LOG IN</button>
+              </div>
+              <div class="form-secondary">
+                <a href="#" class="link">Sign Up</a>
+                <a href="#" class="link">Lost your password?</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sliding image panel (covers left by default, slides to right on sign-up view) -->
+        <div class="panel image-panel" aria-hidden="false">
+          <div class="image-overlay" role="presentation"></div>
+          <div class="image-content image-content--default" aria-live="polite">
+            <h2>Create Account</h2>
+            <p>Sign up to get started</p>
+            <button class="btn btn-ghost" id="toSignup" aria-controls="authContainer" aria-expanded="false">Sign Up</button>
+          </div>
+          <div class="image-content image-content--alt" aria-live="polite">
+            <h2>Welcome Back</h2>
+            <p>Already have an account?</p>
+            <button class="btn btn-ghost" id="toLogin" aria-controls="authContainer" aria-expanded="true">Log In</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+

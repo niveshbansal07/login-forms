@@ -1,0 +1,108 @@
+.App {
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #E0E0E0;
+}
+
+.btn-secondary:hover {
+  background-color: #F5F5F5;
+  transform: translateY(-2px);
+}
+
+.btn-google {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #E0E0E0;
+}
+
+.btn-apple {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid #E0E0E0;
+  border-radius: 24px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #022B32;
+}
+
+.form-input::placeholder {
+  color: #9CAAB0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .form-input {
+    padding: 14px 18px;
+    font-size: 16px;
+  }
+} 
